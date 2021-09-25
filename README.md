@@ -21,9 +21,9 @@ The template defines the topology of the Redis cluster
 
 ```
 master:
-  image: redis:3
+  image: redis:6.2
 slave:
-  image: redis:3
+  image: redis:6.2
   command: redis-server --slaveof redis-master 6379
   links:
     - master:redis-master
